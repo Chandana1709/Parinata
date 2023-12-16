@@ -118,48 +118,62 @@ form, .content{
 
 /* Your existing CSS styles here */
 
-/* Mobile view */
+/* Mobile View (max-width: 480px) */
 @media only screen and (max-width: 480px) {
     body {
         font-size: 60%;
-      
     }
 
-    .container {
-        margin-top: 0; /* Remove margin in mobile view */
-        width: 100%;
+    /* Adjust styles for mobile view here */
+
+    .header {
+        width: 85%;
+    
     }
 
-    .container .left,
-    .container .right {
-        width: 100%;
-        float: none;
+    form, .content {
+        width: 80%;    padding: 20px;
+        border: 1px solid #80C4DE;
+        background: white;
+        border-radius: 10px;
     }
 
-    .formBox {
-        padding: 40px 20px;
+    .input-group input {
+        width: 90%;
     }
 
-    .title {
-        padding: 20px 0 10px;
-    }
-
-    .title h1 {
-        font-size: 24px;
+    .button1 {
+        font-size: 14px;
     }
 }
 
-/* Tablet view */
+/* Tablet View (min-width: 481px and max-width: 1024px) */
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
-    .container {
-        width: 80%; /* Adjusted width for tablet view */
-        margin-top: 0; /* Remove margin in tablet view */
+    /* Adjust styles for tablet view here */
+
+    .header {
+        width: 73%;
+         /* Added margin around the header */
     }
 
-    .formBox {
-        padding: 40px 30px; /* Adjusted padding for tablet view */
+    form, .content {
+        width: 70%;
+  
+        padding: 20px;
+        border: 1px solid #80C4DE;
+        background: white;
+        border-radius: 10px;
+    }
+
+    .input-group input {
+        width: 100%;
+    }
+
+    .button1 {
+        font-size: 16px;
     }
 }
+
 .toggle-password {
       position: absolute;
       right: 10px;
@@ -247,7 +261,7 @@ form, .content{
        <div class ="input-group">
        <label><b>Email Id</b></label>
         
-       <input type="text" name="email_id" id="email_id" pattern="[a-z0-9._%+-]+@gmail\.com$" placeholder="Email Id" required>
+       <input type="email" name="email_id" id="email_id" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}" placeholder="Email Id" required>
          
       </div>
       <div class ="input-group">
