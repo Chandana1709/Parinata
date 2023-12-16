@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>Registerform</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("userregbackground.png");
+      background-size: cover;
+      font-family: sans-serif;
+    }
+
+    .loader {
+      position: absolute;
+      top: calc(50% - 40px);
+      left: calc(50% - 40px);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background: transparent;
+      height: 70px;
+      width: 100%;
+    }
+
+    label.logo {
+      color: white;
+      font-size: 40px;
+      line-height: 90px;
+      padding: 0 100px;
+      font-weight: bold;
+      font-family: cursive;
+    }
+
+    @media (max-width: 858px) {
+      .checkbtn {
+        display: block;
+      }
+
+      ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #FFAE19;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+      }
+
+      nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+
+      nav ul li a {
+        font-size: 20px;
+      }
+
+      a:hover, a.active {
+      }
+
+      #check:checked ~ ul {
+        left: 0;
+      }
+    }
+
+    .title {
+      text-align: center;
+      padding: 50px 0 20px;
+    }
+
+    .title h1 {
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-transform: uppercase;
+      font-size: 35px;
+    }
+
+    .container {
+      margin-top:100px;
+      margin-left:400px;
+      width: 50%;
+      height: 500px;
+      background: #fff;
+      /* margin: 0 auto; */
+      border: 2px solid #fff;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+    }
+
+    .container .right {
+      float: right;
+      height: 400px;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .container .left {
+      float: left;
+      width: 50%;
+      height: 400px;
+      background: url(Mobile-login-Cristina.jpg);
+      box-sizing: border-box;
+      background-size: cover;
+    }
+
+    .formBox {
+      width: 100%;
+      padding: 40px 80px;
+      box-sizing: border-box;
+      height: 400px;
+      background: #fff;
+    }
+
+    .formBox p {
+      margin: 0;
+      padding: 0;
+      font-weight: bold;
+    }
+
+    .formBox input {
+      margin-bottom: 20px;
+    }
+
+.formBox input[type="text"],
+.formBox input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #6af13;
+  outline: none;
+  height: 40px;
+  width: 100%;
+}
+
+
+
+    .formBox input[type="text"]:focus,
+    .formBox input[type="password"]:focus {
+      border-bottom: 2px solid #262626;
+    }
+
+    .formBox input[type="submit"] {
+      border: none;
+      outline: none;
+      height: 40px;
+      width: 60%;
+      color: #fff;
+      background:#217C7E;
+      cursor: pointer;
+    }
+
+    .formBox input[type="submit"]:hover {
+      background: #217C7E;
+      color: #ffffff;
+    }
+
+    .formBox {
+      color: #262626;
+    }
+
+    label.logo {
+      color: white;
+      font-size: 40px;
+      line-height: 60px;
+      padding: 0 100px;
+      font-weight: bold;
+      font-style: Serif;
+    }
+    @media (max-width: 480px) {
+    .container {
+      width: 90%;
+    }
+
+    .container .left,
+    .container .right {
+      width: 100%;
+      float: none;
+    }
+
+    .formBox {
+      padding: 40px 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      margin-top:10px;
+      margin-left:10px;
+      width: 90%;
+     
+      background: #fff;
+      /* margin: 0 auto; */
+      border: 2px solid #fff;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+    }
+
+    .container .left {
+      display: none; /* Hide the left div in mobile view */
+    }
+
+    .container .right {
+      width: 100%;
+      float: none;
+    }
+
+    .formBox {
+      padding: 40px 20px;
+    }
+  }
+
+    /* Tablet view */
+    @media (min-width: 481px) and (max-width: 1024px) {
+      .container {
+      margin-top:160px;
+      margin-left:40px;
+      width: 90%;
+     
+      background: #fff;
+      /* margin: 0 auto; */
+      border: 2px solid #fff;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, .5);
+    }
+
+    .formBox {
+      padding: 40px 30px; /* Adjusted padding for tablet view */
+    }
+  }
+ 
+
+.title h1 {
+    margin: 0;
+    padding: 0;
+    color: #217C7E;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+.toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      margin-top: -10px;
+    }
+  </style>
+</head>
+<body>
+ 
+  <div class="container">
+    <div class="left"></div>
+    <div class="right">
+     
+      <div class="formBox">
+
+        <form method="POST" action="uservalid.php">
+          <div class="title">
+            <h1>Login</h1>
+          </div>
+          <label for="email"><b>Email-id</b></label><br>
+          <input type="text" name="email_id" id="email_id" pattern="[a-z0-9._%+-]+@gmail\.com$" placeholder="Email Id" required>
+          <label for="password"><b>Password</b></label><br>
+          <div style="position: relative;">
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            <i class="uil uil-eye-slash toggle-password" onclick="togglePassword()"></i>
+          </div>
+          
+          <input type="submit" name="submit" value="Login">
+          <p> Don't have an account?<a href="reg.php">Register</a></p>
+          <p> Forgot password?<a href="forgotpassword.php">Forgot Password</a></p>
+         
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    function togglePassword() {
+      var passwordField = document.getElementById("password");
+      var toggleIcon = document.querySelector(".toggle-password");
+
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.classList.remove("uil-eye-slash");
+        toggleIcon.classList.add("uil-eye");
+      } else {
+        passwordField.type = "password";
+        toggleIcon.classList.remove("uil-eye");
+        toggleIcon.classList.add("uil-eye-slash");
+      }
+    }
+  </script>
+</body>
+</html>
