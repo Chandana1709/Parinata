@@ -70,8 +70,7 @@
         font-size: 20px;
       }
 
-      a:hover, a.active {
-      }
+   
 
       #check:checked ~ ul {
         left: 0;
@@ -137,9 +136,11 @@
     }
 
 .formBox input[type="text"],
-.formBox input[type="password"] {
+.formBox input[type="password"],
+.formBox input[type="email"]
+ {
   border: none;
-  border-bottom: 2px solid #6af13;
+  border-bottom: 2px solid #6af1;
   outline: none;
   height: 40px;
   width: 100%;
@@ -270,7 +271,7 @@
             <h1>Login</h1>
           </div>
           <label for="email"><b>Email-id</b></label><br>
-          <input type="text" name="email_id" id="email_id" pattern="[a-z0-9._%+-]+@gmail\.com$" placeholder="Email Id" required>
+          <input type="email" name="email_id" id="email_id" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}"placeholder="Email Id" required>
           <label for="password"><b>Password</b></label><br>
           <div style="position: relative;">
             <input type="password" name="password" id="password" placeholder="Enter password" required>
